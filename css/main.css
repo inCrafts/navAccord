@@ -1,0 +1,146 @@
+ul, 
+ul li,
+ul li a,
+ul li a span {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+
+li a {
+	color: #000000;
+	font-weight: 700;
+	font-size: 16px;
+}
+
+.accordeon {
+	list-style: none;
+	
+}
+
+/* Функция*/
+
+.accordeon li > .submenu {
+	height: 0;
+	overflow: hidden;
+	-webkit-transition: height .4s ease-in-out;
+	-moz-transition: height .4s ease-in-out;
+	-o-transition: height .4s ease-in-out;
+	-ms-transition: height .4s ease-in-out;
+	transition: height .4s ease-in-out;
+}
+
+/*    Раскрытие    */
+
+.accordeon li:target.main > .submenu {
+	height: 256px;
+}
+
+.accordeon li:target.extra > .submenu {
+	height: 129px;
+}
+
+.accordeon li > a {
+	display: block;
+	position: relative;
+	width: 200px;
+	height: 32px;
+	padding: 5px 10px 5px 50px;
+	line-height: 32px;
+	text-decoration: none;
+	background: #A7CECC;
+	background: -webkit-radial-gradient(at top, #FEFFFF, #A7CECC);
+	background: -moz-radial-gradient(at top, #FEFFFF, #A7CECC);
+	background: -o-radial-gradient(at top, #FEFFFF, #A7CECC);
+	background: radial-gradient(at top, #FEFFFF, #A7CECC);
+}
+
+.accordeon li:hover > a, .accordeon li:target > a {
+	color: navy;
+
+background: #A7CECC;
+	background: -webkit-radial-gradient(at top, #A7CECC, #FEFFFF);
+	background: -moz-radial-gradient(at top, #A7CECC, #FEFFFF);
+	background: -o-radial-gradient(at top, #A7CECC, #FEFFFF);
+	background: radial-gradient(at top, #A7CECC, #FFFFFF);
+}
+
+.accordeon li > a em {
+	margin-right: 10px;
+} 
+
+.accordeon li > a span {
+	position: absolute;
+	display: block;
+	top: 7px;
+	right: 10px;
+	line-height: 20px;
+	background: #fff;
+	border-radius: 15px;
+	padding: 0 10px;
+}
+
+.accordeon li:hover > a span, .accordeon li:target > a span {
+	color: #fdfdfd;
+	background: #A7CECC;	
+}
+
+.accordeon li > a:before {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 7px;
+	left: 10px;
+	width: 24px;
+	height: 24px;
+}
+
+.accordeon li.main > a::before {
+	background: url('../img/6.png') no-repeat;
+	background-position: 0 0;
+}
+
+.accordeon li:hover.main > a::before, .accordeon li:target.main > a::before {
+opacity: .7;
+}
+
+
+.accordeon li.extra > a::before {
+	background: url('../img/4.png') no-repeat;
+}
+
+.accordeon li:hover.extra > a::before, .accordeon li:target.extra > a::before {
+opacity: .7;
+}
+
+
+/*    Подменню    */
+
+.submenu li a {
+	color: #767676;
+	background: #E6FFFF;
+	border-bottom: 1px solid #cccccc;
+}
+
+.submenu li:last-child a {
+	/*border-bottom: none;*/
+}
+
+.submenu li a span {
+	background-color: transparent;
+	border: 1px solid #dddddd;
+}
+
+.submenu em {
+	font-weight: normal;
+	
+}
+
+
+
+
+
+
+
+
